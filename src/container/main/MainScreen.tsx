@@ -1,5 +1,5 @@
 import { Button, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import { MainStackScreenProps } from '../../navigation/Navigation'
 import { images } from '../../../assets/images';
 import DotGreen from '../../components/DotGreen';
@@ -194,7 +194,7 @@ const MainScreen: React.FC<MainStackScreenProps<'Main'>> = (props) => {
 
 
 
-export default MainScreen
+export default memo( MainScreen )
 
 const styles = StyleSheet.create({
   boxBar: {

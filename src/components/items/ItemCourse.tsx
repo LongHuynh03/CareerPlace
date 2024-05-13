@@ -1,5 +1,5 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { memo } from 'react'
 import ButtonFavorite from '../ButtonFavorite'
 import { imageItemCourse, images } from '../../../assets/images'
 import { Colors } from '../../values/Colors'
@@ -100,7 +100,7 @@ const ItemCourse: React.FC<ItemCourseProps> = (props) => {
     )
 }
 
-export default ItemCourse
+export default memo(ItemCourse)
 
 const styles = StyleSheet.create({
     container: {
