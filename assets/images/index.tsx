@@ -12,6 +12,10 @@ export const images = {
     LEAVES_UP_1 : require ('./LeavesUp_1.png'),
     CLOUDGREEN_DOWN_1 : require('./CloudGreenDown_1.png'),
     CLOUDGREEN_UP_1: require('./CloudGreenUp_1.png'),
+    GOOGLE_1: require('./Google_1.png'),
+    LSNHAYNI_1: require('./LsnHayni_1.png'),
+    MICROSOFR_1: require('./Microsorf_1.png'),
+    SKY_1: require('./Sky_1.png'),
 }
 
 export const imageItemCourse = [

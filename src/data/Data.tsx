@@ -1,3 +1,5 @@
+import { images } from "../../assets/images"
+
 export const DataTag = [
     {
         id: 1,
@@ -162,5 +164,44 @@ export const DataCourse = [
         rate: 4.7,
         hours: 147,
         people: 10000
+    },
+]
+
+export const DataJobs = [
+    {
+        id: 1,
+        title: 'UX Designer',
+        brand: 'Google',
+        country: 'California, USA',
+        description: 'We are looking for a talented UX Designer experienced in crafting intuitive user interfaces. Y...',
+        tag: ['Full-time','Middle'],
+        image_logo: images.GOOGLE_1,
+    },
+    {
+        id: 2,
+        title: 'QA Engineer',
+        brand: 'Microsoft',
+        country: 'New York, USA',
+        description: 'Our Company looking for a professional QA Engineer. Hybrid work format and pleasant office.',
+        tag: ['Hybrid','Middle+'],
+        image_logo: images.MICROSOFR_1
+    },
+    {
+        id: 3,
+        title: 'Junior UI Designer',
+        brand: 'Sky',
+        country: 'London, UK',
+        description: 'We’re here to drive digital communication through technology innovation.  The Group Digital Engagement.',
+        tag: ['Remotely','Junior'],
+        image_logo: images.SKY_1
+    },
+    {
+        id: 4,
+        title: 'Content Designer',
+        brand: 'Lsn Hayni',
+        country: 'Warsaw, Poland',
+        description: 'We are looking for a talented UX Designer experienced in crafting intuitive user interfaces. Y...',
+        tag: ['Full-time','Senior'],
+        image_logo: images.LSNHAYNI_1,
     },
 ]

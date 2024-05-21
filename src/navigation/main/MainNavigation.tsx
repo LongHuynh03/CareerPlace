@@ -10,6 +10,8 @@ import { images } from "../../../assets/images";
 import Icon from "../../components/Icon";
 import { icons } from "../../../assets/icons";
 import SearchScreen from "../../container/main/SearchScreen";
+import CalenderScreen from "../../container/main/CalenderScreen";
+import JobAndCareeScreen from "../../container/main/JobAndCareeScreen";
 
 const Tab = createBottomTabNavigator<TabMainStackParamList>();
 const Stack = createStackNavigator<MainStackParamList>();
@@ -44,9 +46,7 @@ const SearchStack = () => {
 const CalenderStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Main" component={MainScreen} />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
-            <Stack.Screen name="Notification" component={NotificationScreen} />
+            <Stack.Screen name="Calender" component={CalenderScreen} />
         </Stack.Navigator>
     )
 };
@@ -54,9 +54,7 @@ const CalenderStack = () => {
 const CareeStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Main" component={MainScreen} />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
-            <Stack.Screen name="Notification" component={NotificationScreen} />
+            <Stack.Screen name="JobAndCaree" component={JobAndCareeScreen} />
         </Stack.Navigator>
     )
 };
@@ -69,6 +67,7 @@ const MainNavigation = () => {
         <Tab.Navigator screenOptions={{ 
             headerShown: false, 
             tabBarShowLabel: false,
+            tabBarHideOnKeyboard: true,
             tabBarStyle: {
                 position: 'absolute',
                 left: 24,

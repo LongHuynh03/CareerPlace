@@ -18,8 +18,7 @@ export default Background
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        // paddingHorizontal: 24,
+        flexGrow: 1,
         paddingTop: 24,
         backgroundColor: 'rgba(26, 26, 26, 1)'
     },

@@ -20,4 +20,6 @@ export const icons = {
     Search : require('./Search_1.png'),
     Search_active : require('./Search_active_1.png'),
     Setting : require('./Settings_1.png'),
+    Desktop: require('./Desktop_1.png'),
+    
 }
