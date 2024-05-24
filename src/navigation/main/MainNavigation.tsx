@@ -28,9 +28,7 @@ const MainStack = () => {
 const ProfileStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Main" component={MainScreen} />
             <Stack.Screen name="Profile" component={ProfileScreen} />
-            <Stack.Screen name="Notification" component={NotificationScreen} />
         </Stack.Navigator>
     )
 }

@@ -37,11 +37,10 @@ const styles = StyleSheet.create({
     container: {
         marginHorizontal: 24,
         width: 345,
-        height: 28,
+        height: 30,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 31
     },
     button: {
         width: 28, 

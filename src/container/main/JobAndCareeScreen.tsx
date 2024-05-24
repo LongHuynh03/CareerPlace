@@ -57,7 +57,8 @@ const JobAndCareeScreen = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 24,
-        marginBottom: 25
+        marginBottom: 25,
+        marginTop: 36
       }}>
         <Text style = {{
           fontWeight: '600',

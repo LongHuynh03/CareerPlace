@@ -49,6 +49,7 @@ const MainScreen: React.FC<MainStackScreenProps<'Main'>> = (props) => {
           <DotGreen dotStyle={{
             position: 'absolute',
             left: 0,
+            top: 0
           }} />
         </View>
       </View>

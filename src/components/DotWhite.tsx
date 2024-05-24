@@ -5,7 +5,7 @@ type DotWhiteProps = {
     dotStyle ?: ViewStyle
 }
 
-const DotGreen:React.FC<DotWhiteProps> = (props) => {
+const DotWhite:React.FC<DotWhiteProps> = (props) => {
     const {dotStyle} = props;
   return (
     <View style = {[{
@@ -18,4 +18,4 @@ const DotGreen:React.FC<DotWhiteProps> = (props) => {
   )
 }
 
-export default DotGreen
+export default DotWhite

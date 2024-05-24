@@ -1,5 +1,6 @@
 export const icons = {
     Arrow_bot_right : require('./Arrow_bot_right.png'),
+    Arrow_bot: require('./Arrow_bot_1.png'),
     Arrow_left : require('./Arrow_left_1.png'),
     Arrow_right : require('./Arrow_right_1.png'),
     Arrow_right_green: require('./Arrow_right_green_1.png'),
@@ -21,5 +22,8 @@ export const icons = {
     Search_active : require('./Search_active_1.png'),
     Setting : require('./Settings_1.png'),
     Desktop: require('./Desktop_1.png'),
-    
+    Download: require('./Download_1.png'),
+    Share: require('./Share_1.png'),
+    Page: require('./Page_1.png'),
+
 }
