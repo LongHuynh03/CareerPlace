@@ -205,3 +205,21 @@ export const DataJobs = [
         image_logo: images.LSNHAYNI_1,
     },
 ]
+
+export const DataNotification = [
+    {
+        id: 1,
+        message: 'Hi, Jane! Just a reminder that you have one unfinished lecture, watch it now to complete the progress!',
+        status: 1, 
+    },
+    {
+        id: 2,
+        message: 'You have a new unread message!',
+        status: 1, 
+    },
+    {
+        id: 3,
+        message: 'You received an award from our moderators and entered the top 100 students of our service! Congratulations and we give you 1000 rating points!',
+        status: 1, 
+    },
+]

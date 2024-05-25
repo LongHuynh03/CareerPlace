@@ -25,5 +25,6 @@ export const icons = {
     Download: require('./Download_1.png'),
     Share: require('./Share_1.png'),
     Page: require('./Page_1.png'),
-
+    Delete: require('./Delete_1.png'),
+    X: require('./X_1.png'),
 }

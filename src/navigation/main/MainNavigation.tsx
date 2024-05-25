@@ -12,6 +12,7 @@ import { icons } from "../../../assets/icons";
 import SearchScreen from "../../container/main/SearchScreen";
 import CalenderScreen from "../../container/main/CalenderScreen";
 import JobAndCareeScreen from "../../container/main/JobAndCareeScreen";
+import FavoriteJobScreen from "../../container/main/FavoriteJobScreen";
 
 const Tab = createBottomTabNavigator<TabMainStackParamList>();
 const Stack = createStackNavigator<MainStackParamList>();
@@ -37,6 +38,7 @@ const SearchStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Search" component={SearchScreen} />
+            <Stack.Screen name="JobAndCaree" component={JobAndCareeScreen} />
         </Stack.Navigator>
     )
 };
@@ -53,6 +55,7 @@ const CareeStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="JobAndCaree" component={JobAndCareeScreen} />
+            <Stack.Screen name="Favorite" component={FavoriteJobScreen} />
         </Stack.Navigator>
     )
 };
@@ -62,8 +65,8 @@ const CareeStack = () => {
 
 const MainNavigation = () => {
     return (
-        <Tab.Navigator screenOptions={{ 
-            headerShown: false, 
+        <Tab.Navigator screenOptions={{
+            headerShown: false,
             tabBarShowLabel: false,
             tabBarHideOnKeyboard: true,
             tabBarStyle: {
@@ -76,32 +79,70 @@ const MainNavigation = () => {
                 backgroundColor: 'rgba(47, 47, 47, 1)',
                 elevation: 0
             }
-            }}>
+        }}>
             <Tab.Screen name="MainStack" component={MainStack} options={{
                 tabBarIcon: ({ focused }) => (
                     focused ? <Icon source={icons.Home_active} /> : <Icon source={icons.Home} />
                 ),
-            }} />
+            }}
+                listeners={({ navigation }) => ({
+                    tabPress: e => {
+                        e.preventDefault();
+                        navigation.navigate('Main');
+                    },
+                })} />
             <Tab.Screen name="SearchStack" component={SearchStack} options={{
                 tabBarIcon: ({ focused }) => (
                     focused ? <Icon source={icons.Search_active} /> : <Icon source={icons.Search} />
                 ),
-            }} />
+            }}
+                listeners={({ navigation }) => ({
+                    tabPress: e => {
+                        e.preventDefault();
+                        navigation.navigate('SearchStack', {
+                            screen: 'Search',
+                          });
+                    },
+                })} />
             <Tab.Screen name="CalenderStack" component={CalenderStack} options={{
                 tabBarIcon: ({ focused }) => (
                     focused ? <Icon source={icons.Calender_active} /> : <Icon source={icons.Calender} />
                 ),
-            }} />
+            }} 
+            listeners={({ navigation }) => ({
+                tabPress: e => {
+                    e.preventDefault();
+                    navigation.navigate('CalenderStack', {
+                        screen: 'Calender',
+                      });
+                },
+            })}/>
             <Tab.Screen name="JobAndCareeStack" component={CareeStack} options={{
                 tabBarIcon: ({ focused }) => (
                     focused ? <Icon source={icons.Caree_active} /> : <Icon source={icons.Caree} />
                 ),
-            }} />
+            }} 
+            listeners={({ navigation }) => ({
+                tabPress: e => {
+                    e.preventDefault();
+                    navigation.navigate('JobAndCareeStack', {
+                        screen: 'JobAndCaree',
+                      });
+                },
+            })}/>
             <Tab.Screen name="ProfileStack" component={ProfileStack} options={{
                 tabBarIcon: ({ focused }) => (
                     focused ? <Icon source={icons.Profile_active} /> : <Icon source={icons.Profile} />
                 ),
-            }} />
+            }} 
+            listeners={({ navigation }) => ({
+                tabPress: e => {
+                    e.preventDefault();
+                    navigation.navigate('ProfileStack', {
+                        screen: 'Profile',
+                      });
+                },
+            })}/>
         </Tab.Navigator>
     )
 }

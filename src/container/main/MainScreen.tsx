@@ -39,7 +39,9 @@ const MainScreen: React.FC<MainStackScreenProps<'Main'>> = (props) => {
             marginLeft: 15
           }}>Hello, Jane</Text>
         </View>
-        <View style={{
+        <Pressable onPress={
+          () => {navigation.navigate('Notification')}
+        } style={{
           width: 24,
           height: 24,
           justifyContent: 'center',
@@ -51,7 +53,7 @@ const MainScreen: React.FC<MainStackScreenProps<'Main'>> = (props) => {
             left: 0,
             top: 0
           }} />
-        </View>
+        </Pressable>
       </View>
       <View style={styles.boxTag}>
         {DataTag.map((item, index) => {

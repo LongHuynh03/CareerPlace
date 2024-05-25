@@ -6,8 +6,10 @@ import ItemCaree from '../../components/items/ItemCaree'
 import Header from '../../components/Header'
 import Icon from '../../components/Icon'
 import { icons } from '../../../assets/icons'
+import { MainStackScreenProps } from '../../navigation/Navigation'
 
-const JobAndCareeScreen = () => {
+const JobAndCareeScreen:React.FC<MainStackScreenProps<'JobAndCaree'>> = (props) => {
+const {navigation} = props
 
   const colors = [
     {
@@ -42,7 +44,7 @@ const JobAndCareeScreen = () => {
 
   const onPressJob = () => { };
   const onPressFavorite = () => { };
-  const onPressFavoriteJos = () => { };
+  const onPressFavoriteJos = () => {navigation.navigate('Favorite')};
   const onPressSearch = () => { };
 
   return (
@@ -74,12 +76,11 @@ const JobAndCareeScreen = () => {
       }}>
         {DataJobs.map((item, index) => {
           const backgroundColorJobs = colors[index % colors.length];
-          
           return (
             <ItemCaree
               key={item.id}
               item={item}
-              styleItem={backgroundColorJobs}
+              backGroudJobProps={backgroundColorJobs}
               onPress={onPressJob}
               onPressFavorite={onPressFavorite} />
           )

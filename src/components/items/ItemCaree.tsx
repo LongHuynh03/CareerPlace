@@ -23,16 +23,17 @@ type BackGroudJobProps = {
 
 type ItemCareeProps = {
     item: Caree,
-    styleItem: BackGroudJobProps,
+    backGroudJobProps: BackGroudJobProps,
+    styleItem?: ViewStyle,
     onPressFavorite: () => void,
     onPress: () => void,
 }
 
 const ItemCaree: React.FC<ItemCareeProps> = (props) => {
-    const { item, styleItem, onPress, onPressFavorite } = props;
+    const { item, styleItem, backGroudJobProps, onPress, onPressFavorite } = props;
     return (
         <View style={[styles.container,
-        { backgroundColor: styleItem.backgroud }]}>
+        { backgroundColor: backGroudJobProps.backgroud },styleItem]}>
             <View style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
@@ -93,20 +94,20 @@ const ItemCaree: React.FC<ItemCareeProps> = (props) => {
                     <View style={{
                         height: 28,
                         paddingHorizontal: 13,
-                        backgroundColor: styleItem.backgroud_tag_1,
+                        backgroundColor: backGroudJobProps.backgroud_tag_1,
                         borderRadius: 90,
                         justifyContent: 'center'
                     }}>
                         <Text style={{
                             fontWeight: '400',
                             fontSize: 14,
-                            color: styleItem.color_tag_1,
+                            color: backGroudJobProps.color_tag_1,
                         }}>{item.tag[0]}</Text>
                     </View>
                     <View style={{
                         height: 28,
                         paddingHorizontal: 13,
-                        backgroundColor: styleItem.backgroud_tag_2,
+                        backgroundColor: backGroudJobProps.backgroud_tag_2,
                         borderRadius: 90,
                         justifyContent: 'center',
                         marginLeft: 7
@@ -114,7 +115,7 @@ const ItemCaree: React.FC<ItemCareeProps> = (props) => {
                         <Text style={{
                             fontWeight: '400',
                             fontSize: 14,
-                            color: styleItem.color_tag_2,
+                            color: backGroudJobProps.color_tag_2,
                         }}>{item.tag[1]}</Text>
                     </View>
                 </View>

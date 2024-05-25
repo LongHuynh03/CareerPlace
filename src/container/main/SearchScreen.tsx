@@ -5,9 +5,10 @@ import Background from '../../components/Background'
 import Icon from '../../components/Icon'
 import { icons } from '../../../assets/icons'
 import { DataCategories } from '../../data/Data'
+import { MainStackScreenProps } from '../../navigation/Navigation'
 
-const SearchScreen = () => {
-
+const SearchScreen:React.FC<MainStackScreenProps<'Search'>> = (props) => {
+  const {navigation,} = props;
   const [textSearch, setTextSearch] = useState('');
   const [isActive, setIsActive] = useState(1);
 

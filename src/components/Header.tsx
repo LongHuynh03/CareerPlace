@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 fontSize: 24,
                 color: 'rgba(255, 255, 255, 1)'
             }}>{title}</Text>
-            <Pressable style = {styles.button}>
+            <Pressable onPress={rightOnPress} style = {styles.button}>
                 {iconRight}
             </Pressable>
         </View>
